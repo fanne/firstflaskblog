@@ -1,0 +1,4 @@
+/migrations
+*.pyc
+/app/myblog-dev.sqlite
+start.sh

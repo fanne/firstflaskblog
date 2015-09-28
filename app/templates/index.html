@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}My Blog{% endblock %}
+
+{% block span8 %}
+{% include '_posts.html'%}
+{% if pagination %}
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, '.index') }}
+</div>
+{% endif %}
+{% endblock %}
+
+{% block span12 %}
+<ul class="nav nav-tabs nav-stacked" style="padding-top: 30px">
+  <li><a href='#'>Another Link 1</a></li>
+  <li><a href='#'>Another Link 2</a></li>
+  <li><a href='#'>Another Link 3</a></li>
+</ul>
+<ul class="nav nav-tabs nav-stacked">
+  <li><a href='#'>Another Link 1</a></li>
+  <li><a href='#'>Another Link 2</a></li>
+  <li><a href='#'>Another Link 3</a></li>
+</ul>
+
+<ul class="nav nav-tabs nav-stacked">
+{% for labeal in labels %}
+<li><span class="label label-info">{{labeal.name}}</span></li>
+{% endfor %}
+</ul>
+{% endblock %}
+

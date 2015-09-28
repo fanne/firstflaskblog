@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Flask post{% endblock %}
+{% block content %}
+<div class="container">
+
+    {% include "_posts.html" %}
+
+    {%block delete_post%}
+    {{super}}
+    <button type="button" class="btn btn-default">Delete</button>
+    {%endblock%}
+</div>
+{% endblock %}
